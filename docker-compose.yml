@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  wordpress:
+    container_name: wordpress
+    image: wordpress:apache
+    restart: always
+    ports:
+      - 9000:80
+    environment:
+      WORDPRESS_DB_HOST: 127.0.0.1
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: rootroot
+      WORDPRESS_DB_NAME: reverb_wp
+    volumes:
+      - /home/crisdias/dev/reverb-wp:/var/www/html
+
+
+    
